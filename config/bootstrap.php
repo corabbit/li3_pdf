@@ -1,27 +1,31 @@
 <?php
 
-use \lithium\core\Libraries;
+/**
+ * Configure li3_pdf
+ * write in your config/bootstrap/li3_pdf.php
+ */
+// use \lithium\core\Libraries;
 
-if (!defined('DOMPDF_LIBRARY_PATH')) {
-	define('DOMPDF_LIBRARY_PATH', LITHIUM_LIBRARY_PATH . '/dompdf/dompdf');
-}
+// if (!defined('DOMPDF_LIBRARY_PATH')) {
+// 	define('DOMPDF_LIBRARY_PATH', LITHIUM_LIBRARY_PATH . '/dompdf/dompdf');
+// }
 
-if (file_exists(DOMPDF_LIBRARY_PATH)) {
-	define('DOMPDF_INC_DIR', DOMPDF_LIBRARY_PATH . '/include', true);
-	define('DOMPDF_LIB_DIR', DOMPDF_LIBRARY_PATH . '/lib', true);
+// if (file_exists(DOMPDF_LIBRARY_PATH)) {
+// 	define('DOMPDF_INC_DIR', DOMPDF_LIBRARY_PATH . '/include', true);
+// 	define('DOMPDF_LIB_DIR', DOMPDF_LIBRARY_PATH . '/lib', true);
 
-	require DOMPDF_INC_DIR . '/functions.inc.php';
+// 	require DOMPDF_INC_DIR . '/functions.inc.php';
 
-	$name = 'dompdf';
-	$library = Libraries::get($name);
+// 	$name = 'dompdf';
+// 	$library = Libraries::get($name);
 
-	if (empty($library)) {
-		Libraries::add($name, array(
-			'bootstrap' => false,
-			'path' => DOMPDF_LIBRARY_PATH
-		));
-	}
-}
+// 	if (empty($library)) {
+// 		Libraries::add($name, array(
+// 			'bootstrap' => false,
+// 			'path' => DOMPDF_LIBRARY_PATH
+// 		));
+// 	}
+// }
 
 /**
  * Configure media to output PDF
